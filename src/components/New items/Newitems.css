@@ -1,0 +1,71 @@
+.new-item-card{
+    display:flex;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 7px 20px rgba(211, 211, 211, 0.4);
+    margin-bottom: 50px;
+    
+}
+.new-item-card .checkbox{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.new-item-card input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+.new-item-card input:focus{
+    outline: none;
+    border-width: 2px;
+}
+.new-item-card .form-container{
+    flex-grow:1;
+}
+.btn-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.btn-container button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in ;
+}
+.btn-container button.primary{
+    background-color: yellow;
+}
+.btn-container button:hover{
+    box-shadow: 2px 8px 15px #aaa;
+}
+/* Badge buttons */
+.badge-container {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+.badge-container .p-badge {
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 60px;
+    padding: 4px 10px;
+    text-align: center;
+}
+.badge-container .p-badge.selected-low {
+    outline: 2px solid rgb(3, 252, 57);
+    background-color:rgb(72, 252, 72);
+}
+.badge-container .p-badge.selected-medium {
+    outline: 2px solid rgb(255, 230, 0);
+    background-color: rgb(248, 248, 84);
+}
+.badge-container .p-badge.selected-high {
+    outline: 2px solid red;
+    background-color: rgb(253, 87, 87);
+}

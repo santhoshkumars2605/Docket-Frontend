@@ -1,0 +1,55 @@
+.newcard{
+    display:flex;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 7px 20px rgba(211, 211, 211, 0.4);
+    margin-bottom: 10px;
+}
+.badge-container-filter{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+.badge-container-filter .p-badge {
+    display: flex;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 46px;
+    height: 15px;
+    padding: 4px 10px;
+    text-align: center; 
+    
+}
+@media (max-width: 978px){
+    .badge-container-filter{
+        display: flex;
+        gap: 4px;
+    }
+    .badge-container-filter .p-badge{
+        font-size: 14px;
+        width: 42px;
+        height: 15px;
+        padding: 4px 10px;
+        text-align: center; 
+    }
+}
+.badge-container-filter .p-badge.selected-low {
+    outline: 2px solid rgb(3, 252, 57);
+    background-color:rgb(103, 253, 103);
+}
+.badge-container-filter .p-badge.selected-medium {
+    outline: 2px solid rgb(255, 230, 0);
+    background-color: rgb(248, 248, 84);
+}
+.badge-container-filter .p-badge.selected-high {
+    outline: 2px solid red;
+    background-color: rgb(253, 87, 87);
+}
+.badge-container-filter .p-badge.p-badge.selected-all{
+    outline: 2px solid rgb(117, 117, 255);
+    background-color: rgb(87, 204, 250);
+}
