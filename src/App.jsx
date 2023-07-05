@@ -62,7 +62,7 @@ const App = ()=> {
     const editItem = (updateditem) =>{
       const id = updateditem._id
       console.log(updateditem)
-        const updatedList = list.map((item)=>(item._id===updateditem._id && item.email===email ? updateditem : item))//change
+        const updatedList = list.map((item)=>(item._id===updateditem._id ? updateditem : item))//change && item.email===email 
         fetch(`https://docket-fagy.onrender.com/api/v1/todo/${id}`,{
           method:'PUT',
           headers:{
