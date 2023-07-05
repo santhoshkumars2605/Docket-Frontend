@@ -33,7 +33,7 @@ const App = ()=> {
     const email = localStorage.getItem('email');
     const name = localStorage.getItem('name');   //change
     useEffect(()=>{
-      fetch('http://localhost:5000/api/v1/todo').then((res)=>{
+      fetch('https://docket-fagy.onrender.com/api/v1/todo').then((res)=>{
         res.json().then((json)=>{
           //setemaillist(json) //change
           const filter = json.filter((i)=> i.email===email)//change
@@ -49,7 +49,7 @@ const App = ()=> {
     const deleteItem = (id)=>{
       console.log(id)
         const filterdlist = list.filter((item,i) => item._id!==id && item.email === email)  //change
-        fetch(`http://localhost:5000/api/v1/todo/${id}`,{
+        fetch(`https://docket-fagy.onrender.com/api/v1/todo/${id}`,{
           method:'DELETE'
         }).then(()=>{
           setlist([...filterdlist])
@@ -63,7 +63,7 @@ const App = ()=> {
       const id = updateditem._id
       console.log(updateditem)
         const updatedList = list.map((item)=>(item._id===updateditem._id && item.email===email ? updateditem : item))//change
-        fetch(`http://localhost:5000/api/v1/todo/${id}`,{
+        fetch(`https://docket-fagy.onrender.com/api/v1/todo/${id}`,{
           method:'PUT',
           headers:{
             'Accept': 'application/json ,text/plain ,*/*',
@@ -78,7 +78,7 @@ const App = ()=> {
     const addItem = (item) =>{
       // item.id = nanoid()
       // setlist((prev)=>[item,...prev])
-      fetch('http://localhost:5000/api/v1/todo',{
+      fetch('https://docket-fagy.onrender.com/api/v1/todo',{
         method:'POST',
         headers:{
           'Accept': 'application/json ,text/plain ,*/*',
@@ -95,7 +95,7 @@ const App = ()=> {
     } 
     const filterPriority=(option)=>{
         // console.log(option+"hey")
-        fetch ('http://localhost:5000/api/v1/todo/filter',{
+        fetch ('https://docket-fagy.onrender.com/api/v1/todo/filter',{
             method:"POST",
             headers:{
               'Accept': 'application/json ,text/plain ,*/*',

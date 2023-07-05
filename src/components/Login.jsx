@@ -33,7 +33,7 @@ const Login = ()=>{
     const submit = (e)=>{
         e.preventDefault()
         try{
-            axios.post('http://localhost:5000/api/v1/todo/login',{
+            axios.post('https://docket-fagy.onrender.com/api/v1/todo/login',{
                 name,email,password
             }).then(response =>{
                 if(response.data.status){

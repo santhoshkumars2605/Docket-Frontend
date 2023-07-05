@@ -37,7 +37,7 @@ const Signup = ()=>{
         e.preventDefault();
         try{
             if(password===repassword){
-                axios.post('http://localhost:5000/api/v1/todo/signin',{
+                axios.post('https://docket-fagy.onrender.com/api/v1/todo/signin',{
                     name,email,password
                 }).then(response=>{
                     if(response.data.status === true){
